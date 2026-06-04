@@ -1,75 +1,97 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Mayar Group</title>
+<title>Mayar Social</title>
 
 <style>
 body{
-font-family:Arial;
 margin:0;
+font-family:Arial;
 background:#f0f2f5;
-text-align:center;
 }
 
 .header{
 background:#1877f2;
 color:white;
-padding:20px;
+padding:15px;
 font-size:22px;
 font-weight:bold;
+text-align:center;
 }
 
-.welcome{
-margin:20px;
-font-size:20px;
-font-weight:bold;
+.post{
+background:white;
+width:500px;
+margin:20px auto;
+padding:15px;
+border-radius:10px;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:10px;
-padding:20px;
-max-width:900px;
-margin:auto;
-}
-
-.gallery img{
+img{
 width:100%;
-height:150px;
-object-fit:cover;
 border-radius:0px;
 }
+
+button{
+padding:8px;
+margin:5px;
+border:none;
+cursor:pointer;
+}
+
+.info{
+background:white;
+width:500px;
+margin:20px auto;
+padding:15px;
+border-radius:10px;
+}
 </style>
+
 </head>
 
 <body>
 
 <div class="header">
-Mayar Group
+Mayar Social App
 </div>
 
-<div class="welcome">
-به گروه مایار خوش آمدید عبدالوهاب مایار
+<!-- LOGIN (simple demo) -->
+<div class="info">
+<h3>Login</h3>
+<input placeholder="Username"><br><br>
+<input placeholder="Password" type="password"><br><br>
+<button>Login</button>
 </div>
 
-<div class="gallery">
-
-<img src="https://picsum.photos/300?1">
-<img src="https://picsum.photos/300?2">
-<img src="https://picsum.photos/300?3">
-<img src="https://picsum.photos/300?4">
-<img src="https://picsum.photos/300?5">
-<img src="https://picsum.photos/300?6">
-<img src="https://picsum.photos/300?7">
-<img src="https://picsum.photos/300?8">
-<img src="https://picsum.photos/300?9">
-<img src="https://picsum.photos/300?10">
-<img src="https://picsum.photos/300?11">
-<img src="https://picsum.photos/300?12">
-
+<!-- PROFILE INFO -->
+<div class="info">
+<h3>Abdulwahab Mayar</h3>
+<p>WhatsApp: 07XXXXXXXX</p>
+<p>Telegram: @username</p>
+<p>Instagram: @username</p>
+<p>Facebook: Abdulwahab Mayar</p>
 </div>
+
+<!-- POST -->
+<div class="post">
+<h3>My Post</h3>
+
+<img src="https://picsum.photos/600/400">
+
+<p>Hello friends 👋</p>
+
+<button onclick="like()">👍 Like <span id="like">10</span></button>
+<button>💬 Comment</button>
+</div>
+
+<script>
+let l = 10;
+function like(){
+l++;
+document.getElementById("like").innerText = l;
+}
+</script>
 
 </body>
 </html>
